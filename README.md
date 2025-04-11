@@ -1,240 +1,150 @@
-# KMS
-KMS 激活服务，slmgr 命令激活 Windows 系统、Office
-
-### 激活步骤（管理员命令执行）
-1. 设置服务 `slmgr -skms skms.netnr.eu.org`
-2. 安装密钥 `slmgr -ipk 版本对应秘钥`
-3. 激活系统 `slmgr -ato`
-
-### 可用服务
-- `skms.netnr.eu.org` 维护 **CNAME** 指向有效的服务
-
-+ `telnet skms.netnr.eu.org 1688` 测试服务是否可用
-+ `tcping skms.netnr.eu.org 1688`
-
-### 安装服务
-- ref: <https://github.com/Wind4/vlmcsd/releases>
-- Windows：[vlmcs-Windows](https://gs.zme.ink/static/app/vlmcs-Windows.zip)
-
-### 安装服务（Linux）
-```
-# 一键安装脚本
-wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/kms.sh && chmod +x kms.sh && ./kms.sh
-
-netstat -nxtlp | grep 1688 # 查看端口
-/etc/init.d/kms status # 状态
-/etc/init.d/kms start # 启动
-/etc/init.d/kms stop # 停止
-/etc/init.d/kms restart # 重启
-./kms.sh uninstall # 卸载
-```
-<https://teddysun.com/530.html>
-
-### 密钥 
-<https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys>
-
-[kms-client-activation-keys.md](https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/WindowsServerDocs/get-started/kms-client-activation-keys.md)
-
-### Windows Server（LTSC 版本）
-
-#### Windows Server 2025
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server 2025 Standard   | TVRH6-WHNXV-R9WG3-9XRFY-MY832
-Windows Server 2025 Datacenter | D764K-2NDRG-47T6Q-P8T8W-YP6DF
-Windows Server 2025 Datacenter: Azure Edition | XGN3F-F394H-FD2MY-PP6FD-8MCRC
-
-#### Windows Server 2022
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H
-Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33
-Windows Server 2022 Datacenter: Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV
-
-#### Windows Server 2019
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C
-Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG
-Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726
-
-#### Windows Server 2016
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
-Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG
-Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B
-
-### Windows Server (半年频道版本)
-
-#### Windows Server 版本 20H2、2004、1909、1903 和 1809
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC
-Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D
-
-### Windows 11 和 Windows 10 (半年频道版本)
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows 10/11 专业版 | W269N-WFGWX-YVC9B-4J6C9-T83GX
-Windows 10/11 专业版 N	 | MH37W-N47XK-V7XM9-C7227-GCQG9
-Windows 10/11 专业工作站 | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J
-Windows 10/11 专业工作站 N	 | 9FNHH-K3HBT-3W4TD-6383H-6XYWF
-Windows 10/11 专业教育版 | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y
-Windows 10/11 专业教育版 N | YVWGF-BXNMC-HTQYQ-CPQ99-66QFC
-Windows 10/11 教育版 | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
-Windows 10/11 教育版 N | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ
-Windows 10/11 企业版 | NPPR9-FWDCX-D2C8J-H872K-2YT43
-Windows 10/11 企业版 N | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4
-Windows 10/11 企业版 G | YYVX9-NTFWV-6MDM3-9PT4T-4M68B
-Windows 10/11 企业版 G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV
-
-### Windows 10 (LTSC/LTSB 版本)
-
-#### Windows 10 LTSC 2019
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows 10 企业版 LTSC 2019   | M7XTQ-FN8P6-TTKYV-9D4CC-J462D
-Windows 10 企业版 N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H
-
-#### Windows 10 LTSB 2016
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows 10 企业版 LTSB 2016   | DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ
-Windows 10 企业版 N LTSB 2016 | QFFDN-GRT3P-VKWWX-X7T3R-8B639
-
-#### Windows 10 LTSB 2015
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows 10 企业版 2015 LTSB   | WNMTR-4C88C-JK8YV-HQ7T2-76DF9
-Windows 10 企业版 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ
-
-### 早期版本的 Windows Server
-
-#### Windows Server 版本 1803
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR
-Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG
-
-#### Windows Server 版本 1709
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4
-Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6
-
-#### Windows Server 2012 R2
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server 2012 R2 Standard   | D2N9P-3P6X9-2R39C-7RTCD-MDVJX
-Windows Server 2012 R2 Datacenter | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9
-Windows Server 2012 R2 Essentials | KNC87-3J2TX-XB4WP-VCPJV-M4FWM
-
-#### Windows Server 2012
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server 2012 | BN3D2-R7TKB-3YPBD-8DRP2-27GG4
-Windows Server 2012 N | 8N2M2-HWPGY-7PGT9-HGDD8-GVGGY
-Windows Server 2012 单语言版 | 2WN2H-YGCQR-KFX6K-CD6TF-84YXQ
-Windows Server 2012 特定国家/地区版 | 4K36P-JN4VD-GDC6V-KDT89-DYFKP
-Windows Server 2012 Server Standard | XC9B7-NBPP2-83J2H-RHMBY-92BT4
-Windows Server 2012 MultiPoint Standard | HM7DN-YVMH3-46JC3-XYTG7-CYQJJ
-Windows Server 2012 MultiPoint Premium | XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G
-Windows Server 2012 Datacenter | 48HP8-DN98B-MYWDG-T2DCC-8W83P
-
-#### Windows Server 2008 R2
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Server 2008 R2 Web 版 | 6TPJF-RBVHG-WBW2R-86QPH-6RTM4
-Windows Server 2008 R2 HPC 版 | TT8MH-CG224-D3D7Q-498W2-9QCTX
-WindowsServer 2008 R2 Standard | YC6KT-GKW9T-YTKYR-T4X34-R7VHC
-WindowsServer 2008 R2 企业版 | 489J6-VHDMP-X63PK-3K798-CPX3Y
-WindowsServer 2008 R2 Datacenter | 74YFP-3QFB3-KQT8W-PMXWJ-7M648
-面向基于 Itanium 系统的 Windows Server 2008 R2 | GT63C-RJFQ3-4GMB6-BRFB9-CB83V
-
-#### Windows Server 2008
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows Web Server 2008 | WYR28-R7TFJ-3X2YQ-YCY4H-M249D
-Windows Server 2008 Standard | TM24T-X9RMF-VWXK6-X8JC9-BFGM2
-不带 Hyper-V 的 Windows Server 2008 Standard | W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ
-Windows Server 2008 企业版 | YQGMW-MPWTJ-34KDK-48M3W-X4Q6V
-不带 Hyper-V 的 Windows Server 2008 企业版 | 39BXF-X8Q23-P2WWT-38T2F-G3FPG
-Windows Server 2008 HPC | RCTX3-KWVHP-BR6TB-RB6DM-6X7HP
-Windows Server 2008 Datacenter | 7M67G-PC374-GR742-YH8V4-TCBY3
-不带 Hyper-V 的 Windows Server 2008 Datacenter | 22XQ2-VRXRG-P8D42-K34TD-G3QQC
-面向基于 Itanium 系统的 Windows Server 2008 | 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK
-
-### 早期版本的 Windows
-
-#### Windows 8.1
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows 8.1 专业版 | GCRJD-8NW9H-F2CDX-CCM8D-9D6T9
-Windows 8.1 专业版 N | HMCNV-VVBFX-7HMBH-CTY9B-B4FXY
-Windows 8.1 企业版 | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7
-Windows 8.1 企业版 N | TT4HM-HN7YT-62K67-RGRQJ-JFFXW
-
-#### Windows 8
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows 8 专业版 | NG4HW-VH26C-733KW-K6F98-J8CK4
-Windows 8 专业版 N | XCVCF-2NXM9-723PB-MHCB7-2RYQQ
-Windows 8 企业版 | 32JNW-9KQ84-P47T8-D8GGY-CWCK7
-Windows 8 企业版 N | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT
-
-#### Windows 7
-
-操作系统版本 | KMS 客户端安装密钥
---- | ---
-Windows 7 专业版 | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4
-Windows 7 专业版 N | MRPKT-YTG23-K7D7T-X2JMM-QY7MG
-Windows 7 专业版 E | W82YF-2Q76Y-63HXB-FGJG9-GF7QX
-Windows7 企业版 | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH
-Windows 7 企业版 N | YDRBP-3D83W-TY26F-D46B2-XCKRJ
-Windows 7 企业版 E | C29WB-22CC8-VJ326-GHFJW-H9DH4
-
-### 激活说明
-- KMS 激活有 180 天期限，此期限称为激活有效间隔
-- 若要保持激活状态，您的系统必须通过至少每 180 天连接一次 KMS 服务器来续订激活
-- 默认情况下，系统每 7 天自动进行一次激活续订尝试
-- 在续订客户端激活之后，激活有效间隔重新开始
-- 综上所述，只要您不超过 180 天以上无法连接互联网，系统会自行续期保持激活状态
-
-----------
-### Office（VOL 版本）激活步骤（管理员命令执行）
-1. 进入安装目录 `cd "C:\Program Files (x86)\Microsoft Office\Office16"`
-    - 32 位默认一般为 `C:\Program Files (x86)\Microsoft Office\Office16`
-    - 64 位默认一般为 `C:\Program Files\Microsoft Office\Office16`
-    - **Office16** 是 **Office 2016**
-    - **Office15** 是 **Office 2013**
-    - **Office14** 是 **Office 2010**
-    - 打开以上所说的目录，应该有个 `OSPP.VBS` 文件
-2. 注册 KMS 服务 `cscript ospp.vbs /sethst:skms.netnr.eu.org`
-3. 激活 Office `cscript ospp.vbs /act`
-
-### Office 密钥列表
-- <https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks>
-
-### More
-- <https://kms.cangshui.net>
-- <https://teddysun.com/530.html>
-- <https://blog.03k.org/post/kms.html>
-- <https://github.com/massgravel/Microsoft-Activation-Scripts>
+S01TDQoNCktNUyDmv4DmtLvmnI3liqHvvIxzbG1nciDlkb3ku6Tmv4DmtLsgV2luZG93cyDns7vn
+u5/jgIFPZmZpY2UNCua/gOa0u+atpemqpO+8iOeuoeeQhuWRmOWRveS7pOaJp+ihjO+8iQ0KDQog
+ICAg6K6+572u5pyN5YqhIHNsbWdyIC1za21zIHNrbXMubmV0bnIuZXUub3JnDQogICAg5a6J6KOF
+5a+G6ZKlIHNsbWdyIC1pcGsg54mI5pys5a+55bqU56eY6ZKlDQogICAg5r+A5rS757O757ufIHNs
+bWdyIC1hdG8NCg0K5Y+v55So5pyN5YqhDQoNCiAgICBza21zLm5ldG5yLmV1Lm9yZyDnu7TmiqQg
+Q05BTUUg5oyH5ZCR5pyJ5pWI55qE5pyN5YqhDQoNCiAgICB0ZWxuZXQgc2ttcy5uZXRuci5ldS5v
+cmcgMTY4OCDmtYvor5XmnI3liqHmmK/lkKblj6/nlKgNCiAgICB0Y3Bpbmcgc2ttcy5uZXRuci5l
+dS5vcmcgMTY4OA0KDQrlronoo4XmnI3liqENCg0KICAgIHJlZjogaHR0cHM6Ly9naXRodWIuY29t
+L1dpbmQ0L3ZsbWNzZC9yZWxlYXNlcw0KICAgIFdpbmRvd3PvvJp2bG1jcy1XaW5kb3dzDQoNCuWu
+ieijheacjeWKoe+8iExpbnV477yJDQoNCiMg5LiA6ZSu5a6J6KOF6ISa5pysDQp3Z2V0IC0tbm8t
+Y2hlY2stY2VydGlmaWNhdGUgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RlZGR5
+c3VuL2Fjcm9zcy9tYXN0ZXIva21zLnNoICYmIGNobW9kICt4IGttcy5zaCAmJiAuL2ttcy5zaA0K
+DQpuZXRzdGF0IC1ueHRscCB8IGdyZXAgMTY4OCAjIOafpeeci+err+WPow0KL2V0Yy9pbml0LmQv
+a21zIHN0YXR1cyAjIOeKtuaAgQ0KL2V0Yy9pbml0LmQva21zIHN0YXJ0ICMg5ZCv5YqoDQovZXRj
+L2luaXQuZC9rbXMgc3RvcCAjIOWBnOatog0KL2V0Yy9pbml0LmQva21zIHJlc3RhcnQgIyDph43l
+kK8NCi4va21zLnNoIHVuaW5zdGFsbCAjIOWNuOi9vQ0KDQpodHRwczovL3RlZGR5c3VuLmNvbS81
+MzAuaHRtbA0K5a+G6ZKlDQoNCmh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS96aC1jbi93aW5k
+b3dzLXNlcnZlci9nZXQtc3RhcnRlZC9rbXMtY2xpZW50LWFjdGl2YXRpb24ta2V5cw0KDQprbXMt
+Y2xpZW50LWFjdGl2YXRpb24ta2V5cy5tZA0KV2luZG93cyBTZXJ2ZXLvvIhMVFNDIOeJiOacrO+8
+iQ0KV2luZG93cyBTZXJ2ZXIgMjAyNQ0K5pON5L2c57O757uf54mI5pysIAlLTVMg5a6i5oi356uv
+5a6J6KOF5a+G6ZKlDQpXaW5kb3dzIFNlcnZlciAyMDI1IFN0YW5kYXJkIAlUVlJINi1XSE5YVi1S
+OVdHMy05WFJGWS1NWTgzMg0KV2luZG93cyBTZXJ2ZXIgMjAyNSBEYXRhY2VudGVyIAlENzY0Sy0y
+TkRSRy00N1Q2US1QOFQ4Vy1ZUDZERg0KV2luZG93cyBTZXJ2ZXIgMjAyNSBEYXRhY2VudGVyOiBB
+enVyZSBFZGl0aW9uIAlYR04zRi1GMzk0SC1GRDJNWS1QUDZGRC04TUNSQw0KV2luZG93cyBTZXJ2
+ZXIgMjAyMg0K5pON5L2c57O757uf54mI5pysIAlLTVMg5a6i5oi356uv5a6J6KOF5a+G6ZKlDQpX
+aW5kb3dzIFNlcnZlciAyMDIyIFN0YW5kYXJkIAlWRFlCTi0yN1dQUC1WNEhRVC05Vk1ENC1WTUs3
+SA0KV2luZG93cyBTZXJ2ZXIgMjAyMiBEYXRhY2VudGVyIAlXWDROTS1LWVdZVy1RSkpSNC1YVjNR
+Qi02Vk0zMw0KV2luZG93cyBTZXJ2ZXIgMjAyMiBEYXRhY2VudGVyOiBBenVyZSBFZGl0aW9uIAlO
+VEJWOC05SzdROC1WMjdDNi1NMkJUVi1LSE1YVg0KV2luZG93cyBTZXJ2ZXIgMjAxOQ0K5pON5L2c
+57O757uf54mI5pysIAlLTVMg5a6i5oi356uv5a6J6KOF5a+G6ZKlDQpXaW5kb3dzIFNlcnZlciAy
+MDE5IFN0YW5kYXJkIAlONjlHNC1CODlKMi00RzhGNC1XV1lDQy1KNDY0Qw0KV2luZG93cyBTZXJ2
+ZXIgMjAxOSBEYXRhY2VudGVyIAlXTURHTi1HOVBRRy1YVlZYWC1SM1g0My02M0RGRw0KV2luZG93
+cyBTZXJ2ZXIgMjAxOSBFc3NlbnRpYWxzIAlXVkRITi04Nk03WC00NjZQNi1WSFhWNy1ZWTcyNg0K
+V2luZG93cyBTZXJ2ZXIgMjAxNg0K5pON5L2c57O757uf54mI5pysIAlLTVMg5a6i5oi356uv5a6J
+6KOF5a+G6ZKlDQpXaW5kb3dzIFNlcnZlciAyMDE2IFN0YW5kYXJkIAlXQzJCUS04TlJNMy1GRERZ
+WS0yQkZHVi1LSEtRWQ0KV2luZG93cyBTZXJ2ZXIgMjAxNiBEYXRhY2VudGVyIAlDQjdLRi1CV044
+NC1SN1IyWS03OTNLMi04WERERw0KV2luZG93cyBTZXJ2ZXIgMjAxNiBFc3NlbnRpYWxzIAlKQ0tS
+Ri1OMzdQNC1DMkQ4Mi05WVhSVC00TTYzQg0KV2luZG93cyBTZXJ2ZXIgKOWNiuW5tOmikemBk+eJ
+iOacrCkNCldpbmRvd3MgU2VydmVyIOeJiOacrCAyMEgy44CBMjAwNOOAgTE5MDnjgIExOTAzIOWS
+jCAxODA5DQrmk43kvZzns7vnu5/niYjmnKwgCUtNUyDlrqLmiLfnq6/lronoo4Xlr4bpkqUNCldp
+bmRvd3MgU2VydmVyIFN0YW5kYXJkIAlOMktKWC1KOTRZVy1UUVZGQi1ERzlZVC03MjRDQw0KV2lu
+ZG93cyBTZXJ2ZXIgRGF0YWNlbnRlciAJNk5NUlctMkM4Rk0tRDI0VzctVFFXTVktQ1dIMkQNCldp
+bmRvd3MgMTEg5ZKMIFdpbmRvd3MgMTAgKOWNiuW5tOmikemBk+eJiOacrCkNCuaTjeS9nOezu+e7
+n+eJiOacrCAJS01TIOWuouaIt+err+WuieijheWvhumSpQ0KV2luZG93cyAxMC8xMSDkuJPkuJrn
+iYggCVcyNjlOLVdGR1dYLVlWQzlCLTRKNkM5LVQ4M0dYDQpXaW5kb3dzIDEwLzExIOS4k+S4mueJ
+iCBOIAlNSDM3Vy1ONDdYSy1WN1hNOS1DNzIyNy1HQ1FHOQ0KV2luZG93cyAxMC8xMSDkuJPkuJrl
+t6XkvZznq5kgCU5SRzhCLVZLSzNRLUNYVkNKLTlHMlhGLTZRODRKDQpXaW5kb3dzIDEwLzExIOS4
+k+S4muW3peS9nOermSBOIAk5Rk5ISC1LM0hCVC0zVzRURC02MzgzSC02WFlXRg0KV2luZG93cyAx
+MC8xMSDkuJPkuJrmlZnogrLniYggCTZUUDRSLUdOUFRELUtZWUhRLTdCN0RQLUo0NDdZDQpXaW5k
+b3dzIDEwLzExIOS4k+S4muaVmeiCsueJiCBOIAlZVldHRi1CWE5NQy1IVFFZUS1DUFE5OS02NlFG
+Qw0KV2luZG93cyAxMC8xMSDmlZnogrLniYggCU5XNkMyLVFNUFZXLUQ3S0tLLTNHS1Q2LVZDRkIy
+DQpXaW5kb3dzIDEwLzExIOaVmeiCsueJiCBOIAkyV0g0Ti04UUdCVi1IMjJKUC1DVDQzUS1NRFdX
+Sg0KV2luZG93cyAxMC8xMSDkvIHkuJrniYggCU5QUFI5LUZXRENYLUQyQzhKLUg4NzJLLTJZVDQz
+DQpXaW5kb3dzIDEwLzExIOS8geS4mueJiCBOIAlEUEgyVi1UVE5WQi00WDlRMy1USlI0SC1LSEpX
+NA0KV2luZG93cyAxMC8xMSDkvIHkuJrniYggRyAJWVlWWDktTlRGV1YtNk1ETTMtOVBUNFQtNE02
+OEINCldpbmRvd3MgMTAvMTEg5LyB5Lia54mIIEcgTiAJNDRSUE4tRlRZMjMtOVZUVEItTVA5Qlgt
+VDg0RlYNCldpbmRvd3MgMTAgKExUU0MvTFRTQiDniYjmnKwpDQpXaW5kb3dzIDEwIExUU0MgMjAx
+OQ0K5pON5L2c57O757uf54mI5pysIAlLTVMg5a6i5oi356uv5a6J6KOF5a+G6ZKlDQpXaW5kb3dz
+IDEwIOS8geS4mueJiCBMVFNDIDIwMTkgCU03WFRRLUZOOFA2LVRUS1lWLTlENENDLUo0NjJEDQpX
+aW5kb3dzIDEwIOS8geS4mueJiCBOIExUU0MgMjAxOSAJOTJORlgtOERKUVAtUDZCQlEtVEhGOUMt
+N0NHMkgNCldpbmRvd3MgMTAgTFRTQiAyMDE2DQrmk43kvZzns7vnu5/niYjmnKwgCUtNUyDlrqLm
+iLfnq6/lronoo4Xlr4bpkqUNCldpbmRvd3MgMTAg5LyB5Lia54mIIExUU0IgMjAxNiAJRENQSEst
+TkZNVEMtSDg4TUotUEZIUFktUUo0QkoNCldpbmRvd3MgMTAg5LyB5Lia54mIIE4gTFRTQiAyMDE2
+IAlRRkZETi1HUlQzUC1WS1dXWC1YN1QzUi04QjYzOQ0KV2luZG93cyAxMCBMVFNCIDIwMTUNCuaT
+jeS9nOezu+e7n+eJiOacrCAJS01TIOWuouaIt+err+WuieijheWvhumSpQ0KV2luZG93cyAxMCDk
+vIHkuJrniYggMjAxNSBMVFNCIAlXTk1UUi00Qzg4Qy1KSzhZVi1IUTdUMi03NkRGOQ0KV2luZG93
+cyAxMCDkvIHkuJrniYggMjAxNSBMVFNCIE4gCTJGNzdCLVRORkdZLTY5UVFGLUI4WUtQLUQ2OVRK
+DQrml6nmnJ/niYjmnKznmoQgV2luZG93cyBTZXJ2ZXINCldpbmRvd3MgU2VydmVyIOeJiOacrCAx
+ODAzDQrmk43kvZzns7vnu5/niYjmnKwgCUtNUyDlrqLmiLfnq6/lronoo4Xlr4bpkqUNCldpbmRv
+d3MgU2VydmVyIFN0YW5kYXJkIAlQVFhOOC1KRkhKTS00V0M3OC1NUENCUi05VzRLUg0KV2luZG93
+cyBTZXJ2ZXIgRGF0YWNlbnRlciAJMkhYRE4tS1JYSEItR1BZQzctWUNLRkotN0ZWREcNCldpbmRv
+d3MgU2VydmVyIOeJiOacrCAxNzA5DQrmk43kvZzns7vnu5/niYjmnKwgCUtNUyDlrqLmiLfnq6/l
+ronoo4Xlr4bpkqUNCldpbmRvd3MgU2VydmVyIFN0YW5kYXJkIAlEUENOUC1YUUZLSi1CSkY3Ui1G
+UkM4RC1HRjZHNA0KV2luZG93cyBTZXJ2ZXIgRGF0YWNlbnRlciAJNlk2S0ItTjgyVjgtRDhDUVYt
+MjNNSlctQldURzYNCldpbmRvd3MgU2VydmVyIDIwMTIgUjINCuaTjeS9nOezu+e7n+eJiOacrCAJ
+S01TIOWuouaIt+err+WuieijheWvhumSpQ0KV2luZG93cyBTZXJ2ZXIgMjAxMiBSMiBTdGFuZGFy
+ZCAJRDJOOVAtM1A2WDktMlIzOUMtN1JUQ0QtTURWSlgNCldpbmRvd3MgU2VydmVyIDIwMTIgUjIg
+RGF0YWNlbnRlciAJVzNHR04tRlQ4VzMtWTRNMjctSjg0Q1AtUTNWSjkNCldpbmRvd3MgU2VydmVy
+IDIwMTIgUjIgRXNzZW50aWFscyAJS05DODctM0oyVFgtWEI0V1AtVkNQSlYtTTRGV00NCldpbmRv
+d3MgU2VydmVyIDIwMTINCuaTjeS9nOezu+e7n+eJiOacrCAJS01TIOWuouaIt+err+WuieijheWv
+humSpQ0KV2luZG93cyBTZXJ2ZXIgMjAxMiAJQk4zRDItUjdUS0ItM1lQQkQtOERSUDItMjdHRzQN
+CldpbmRvd3MgU2VydmVyIDIwMTIgTiAJOE4yTTItSFdQR1ktN1BHVDktSEdERDgtR1ZHR1kNCldp
+bmRvd3MgU2VydmVyIDIwMTIg5Y2V6K+t6KiA54mIIAkyV04ySC1ZR0NRUi1LRlg2Sy1DRDZURi04
+NFlYUQ0KV2luZG93cyBTZXJ2ZXIgMjAxMiDnibnlrprlm73lrrYv5Zyw5Yy654mIIAk0SzM2UC1K
+TjRWRC1HREM2Vi1LRFQ4OS1EWUZLUA0KV2luZG93cyBTZXJ2ZXIgMjAxMiBTZXJ2ZXIgU3RhbmRh
+cmQgCVhDOUI3LU5CUFAyLTgzSjJILVJITUJZLTkyQlQ0DQpXaW5kb3dzIFNlcnZlciAyMDEyIE11
+bHRpUG9pbnQgU3RhbmRhcmQgCUhNN0ROLVlWTUgzLTQ2SkMzLVhZVEc3LUNZUUpKDQpXaW5kb3dz
+IFNlcnZlciAyMDEyIE11bHRpUG9pbnQgUHJlbWl1bSAJWE5INlctMlY5R1gtUkdKNEstWThYNkYt
+UUdKMkcNCldpbmRvd3MgU2VydmVyIDIwMTIgRGF0YWNlbnRlciAJNDhIUDgtRE45OEItTVlXREct
+VDJEQ0MtOFc4M1ANCldpbmRvd3MgU2VydmVyIDIwMDggUjINCuaTjeS9nOezu+e7n+eJiOacrCAJ
+S01TIOWuouaIt+err+WuieijheWvhumSpQ0KV2luZG93cyBTZXJ2ZXIgMjAwOCBSMiBXZWIg54mI
+IAk2VFBKRi1SQlZIRy1XQlcyUi04NlFQSC02UlRNNA0KV2luZG93cyBTZXJ2ZXIgMjAwOCBSMiBI
+UEMg54mIIAlUVDhNSC1DRzIyNC1EM0Q3US00OThXMi05UUNUWA0KV2luZG93c1NlcnZlciAyMDA4
+IFIyIFN0YW5kYXJkIAlZQzZLVC1HS1c5VC1ZVEtZUi1UNFgzNC1SN1ZIQw0KV2luZG93c1NlcnZl
+ciAyMDA4IFIyIOS8geS4mueJiCAJNDg5SjYtVkhETVAtWDYzUEstM0s3OTgtQ1BYM1kNCldpbmRv
+d3NTZXJ2ZXIgMjAwOCBSMiBEYXRhY2VudGVyIAk3NFlGUC0zUUZCMy1LUVQ4Vy1QTVhXSi03TTY0
+OA0K6Z2i5ZCR5Z+65LqOIEl0YW5pdW0g57O757uf55qEIFdpbmRvd3MgU2VydmVyIDIwMDggUjIg
+CUdUNjNDLVJKRlEzLTRHTUI2LUJSRkI5LUNCODNWDQpXaW5kb3dzIFNlcnZlciAyMDA4DQrmk43k
+vZzns7vnu5/niYjmnKwgCUtNUyDlrqLmiLfnq6/lronoo4Xlr4bpkqUNCldpbmRvd3MgV2ViIFNl
+cnZlciAyMDA4IAlXWVIyOC1SN1RGSi0zWDJZUS1ZQ1k0SC1NMjQ5RA0KV2luZG93cyBTZXJ2ZXIg
+MjAwOCBTdGFuZGFyZCAJVE0yNFQtWDlSTUYtVldYSzYtWDhKQzktQkZHTTINCuS4jeW4piBIeXBl
+ci1WIOeahCBXaW5kb3dzIFNlcnZlciAyMDA4IFN0YW5kYXJkIAlXN1ZENi03SkZCUi1SWDI2Qi1Z
+S1EzWS02RkZGSg0KV2luZG93cyBTZXJ2ZXIgMjAwOCDkvIHkuJrniYggCVlRR01XLU1QV1RKLTM0
+S0RLLTQ4TTNXLVg0UTZWDQrkuI3luKYgSHlwZXItViDnmoQgV2luZG93cyBTZXJ2ZXIgMjAwOCDk
+vIHkuJrniYggCTM5QlhGLVg4UTIzLVAyV1dULTM4VDJGLUczRlBHDQpXaW5kb3dzIFNlcnZlciAy
+MDA4IEhQQyAJUkNUWDMtS1dWSFAtQlI2VEItUkI2RE0tNlg3SFANCldpbmRvd3MgU2VydmVyIDIw
+MDggRGF0YWNlbnRlciAJN002N0ctUEMzNzQtR1I3NDItWUg4VjQtVENCWTMNCuS4jeW4piBIeXBl
+ci1WIOeahCBXaW5kb3dzIFNlcnZlciAyMDA4IERhdGFjZW50ZXIgCTIyWFEyLVZSWFJHLVA4RDQy
+LUszNFRELUczUVFDDQrpnaLlkJHln7rkuo4gSXRhbml1bSDns7vnu5/nmoQgV2luZG93cyBTZXJ2
+ZXIgMjAwOCAJNERXRlAtSkYzREotQjdEVEgtNzhGSkItUERSSEsNCuaXqeacn+eJiOacrOeahCBX
+aW5kb3dzDQpXaW5kb3dzIDguMQ0K5pON5L2c57O757uf54mI5pysIAlLTVMg5a6i5oi356uv5a6J
+6KOF5a+G6ZKlDQpXaW5kb3dzIDguMSDkuJPkuJrniYggCUdDUkpELThOVzlILUYyQ0RYLUNDTThE
+LTlENlQ5DQpXaW5kb3dzIDguMSDkuJPkuJrniYggTiAJSE1DTlYtVlZCRlgtN0hNQkgtQ1RZOUIt
+QjRGWFkNCldpbmRvd3MgOC4xIOS8geS4mueJiCAJTUhGOU4tWFk2WEItV1ZYTUMtQlREQ1QtTUtL
+RzcNCldpbmRvd3MgOC4xIOS8geS4mueJiCBOIAlUVDRITS1ITjdZVC02Mks2Ny1SR1JRSi1KRkZY
+Vw0KV2luZG93cyA4DQrmk43kvZzns7vnu5/niYjmnKwgCUtNUyDlrqLmiLfnq6/lronoo4Xlr4bp
+kqUNCldpbmRvd3MgOCDkuJPkuJrniYggCU5HNEhXLVZIMjZDLTczM0tXLUs2Rjk4LUo4Q0s0DQpX
+aW5kb3dzIDgg5LiT5Lia54mIIE4gCVhDVkNGLTJOWE05LTcyM1BCLU1IQ0I3LTJSWVFRDQpXaW5k
+b3dzIDgg5LyB5Lia54mIIAkzMkpOVy05S1E4NC1QNDdUOC1EOEdHWS1DV0NLNw0KV2luZG93cyA4
+IOS8geS4mueJiCBOIAlKTU5NRi1SSFc3UC1ETVk2WC1SRjNEUi1YMkJRVA0KV2luZG93cyA3DQrm
+k43kvZzns7vnu5/niYjmnKwgCUtNUyDlrqLmiLfnq6/lronoo4Xlr4bpkqUNCldpbmRvd3MgNyDk
+uJPkuJrniYggCUZKODJILVhUNkNSLUo4RDdQLVhRSkoyLUdQREQ0DQpXaW5kb3dzIDcg5LiT5Lia
+54mIIE4gCU1SUEtULVlURzIzLUs3RDdULVgySk1NLVFZN01HDQpXaW5kb3dzIDcg5LiT5Lia54mI
+IEUgCVc4MllGLTJRNzZZLTYzSFhCLUZHSkc5LUdGN1FYDQpXaW5kb3dzNyDkvIHkuJrniYggCTMz
+UFhILTdZNktGLTJWSkM5LVhCQlI4LUhWVEhIDQpXaW5kb3dzIDcg5LyB5Lia54mIIE4gCVlEUkJQ
+LTNEODNXLVRZMjZGLUQ0NkIyLVhDS1JKDQpXaW5kb3dzIDcg5LyB5Lia54mIIEUgCUMyOVdCLTIy
+Q0M4LVZKMzI2LUdIRkpXLUg5REg0DQrmv4DmtLvor7TmmI4NCg0KICAgIEtNUyDmv4DmtLvmnIkg
+MTgwIOWkqeacn+mZkO+8jOatpOacn+mZkOensOS4uua/gOa0u+acieaViOmXtOmalA0KICAgIOiL
+peimgeS/neaMgea/gOa0u+eKtuaAge+8jOaCqOeahOezu+e7n+W/hemhu+mAmui/h+iHs+Wwkeav
+jyAxODAg5aSp6L+e5o6l5LiA5qyhIEtNUyDmnI3liqHlmajmnaXnu63orqLmv4DmtLsNCiAgICDp
+u5jorqTmg4XlhrXkuIvvvIzns7vnu5/mr48gNyDlpKnoh6rliqjov5vooYzkuIDmrKHmv4DmtLvn
+u63orqLlsJ3or5UNCiAgICDlnKjnu63orqLlrqLmiLfnq6/mv4DmtLvkuYvlkI7vvIzmv4DmtLvm
+nInmlYjpl7TpmpTph43mlrDlvIDlp4sNCiAgICDnu7zkuIrmiYDov7DvvIzlj6ropoHmgqjkuI3o
+toXov4cgMTgwIOWkqeS7peS4iuaXoOazlei/nuaOpeS6kuiBlOe9ke+8jOezu+e7n+S8muiHquih
+jOe7reacn+S/neaMgea/gOa0u+eKtuaAgQ0KDQpPZmZpY2XvvIhWT0wg54mI5pys77yJ5r+A5rS7
+5q2l6aqk77yI566h55CG5ZGY5ZG95Luk5omn6KGM77yJDQoNCiAgICDov5vlhaXlronoo4Xnm67l
+vZUgY2QgIkM6XFByb2dyYW0gRmlsZXMgKHg4NilcTWljcm9zb2Z0IE9mZmljZVxPZmZpY2UxNiIN
+CiAgICAgICAgMzIg5L2N6buY6K6k5LiA6Iis5Li6IEM6XFByb2dyYW0gRmlsZXMgKHg4NilcTWlj
+cm9zb2Z0IE9mZmljZVxPZmZpY2UxNg0KICAgICAgICA2NCDkvY3pu5jorqTkuIDoiKzkuLogQzpc
+UHJvZ3JhbSBGaWxlc1xNaWNyb3NvZnQgT2ZmaWNlXE9mZmljZTE2DQogICAgICAgIE9mZmljZTE2
+IOaYryBPZmZpY2UgMjAxNg0KICAgICAgICBPZmZpY2UxNSDmmK8gT2ZmaWNlIDIwMTMNCiAgICAg
+ICAgT2ZmaWNlMTQg5pivIE9mZmljZSAyMDEwDQogICAgICAgIOaJk+W8gOS7peS4iuaJgOivtOea
+hOebruW9le+8jOW6lOivpeacieS4qiBPU1BQLlZCUyDmlofku7YNCiAgICDms6jlhowgS01TIOac
+jeWKoSBjc2NyaXB0IG9zcHAudmJzIC9zZXRoc3Q6c2ttcy5uZXRuci5ldS5vcmcNCiAgICDmv4Dm
+tLsgT2ZmaWNlIGNzY3JpcHQgb3NwcC52YnMgL2FjdA0KDQpPZmZpY2Ug5a+G6ZKl5YiX6KGoDQoN
+CiAgICBodHRwczovL2RvY3MubWljcm9zb2Z0LmNvbS9lbi11cy9EZXBsb3lPZmZpY2UvdmxhY3Rp
+dmF0aW9uL2d2bGtzDQoNCk1vcmUNCg0KICAgIGh0dHBzOi8va21zLmNhbmdzaHVpLm5ldA0KICAg
+IGh0dHBzOi8vdGVkZHlzdW4uY29tLzUzMC5odG1sDQogICAgaHR0cHM6Ly9ibG9nLjAzay5vcmcv
+cG9zdC9rbXMuaHRtbA0KICAgIGh0dHBzOi8vZ2l0aHViLmNvbS9tYXNzZ3JhdmVsL01pY3Jvc29m
+dC1BY3RpdmF0aW9uLVNjcmlwdHMNCg==
